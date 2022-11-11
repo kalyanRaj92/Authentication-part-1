@@ -72,7 +72,7 @@ app.post("/users/", async (request, response) => {
     response.send("User created successfully");
   } else {
     //Send invalid username as response
-    response.status = 400;
+    response.status(400);
     response.send("User already exists");
   }
 });
